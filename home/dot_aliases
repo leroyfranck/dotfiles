@@ -1,0 +1,44 @@
+# Easier navigation: .., ..., ~ and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias -- -="cd -"
+
+
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# List all files colorized in long format
+alias l="ls -lF"
+
+# List all files colorized in long format, excluding . and ..
+alias la="ls -lAF"
+
+# List only directories
+alias lsd="ls -lF | grep --color=never '^d'"
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
+
+alias dc="docker-compose"
+alias k="kubectl"
+
+# Git Shortcuts for the super lazy
+alias g="git"
+alias st="git st"
+alias cm="git cm"
+alias lp="git lp"
+
+# Azure CLI
+alias azsubs="az account list --query \"[].{name:name, subscriptionId:id}\""
+
+# terraform
+
+alias tf="terraform"
+alias tfplan="terraform plan -out plan.tfplan"
+alias tfapply="terraform apply plan.tfplan"
+
+# File size
+alias fs="stat -f \"%z bytes\""

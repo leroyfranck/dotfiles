@@ -1,0 +1,5 @@
+[user]
+	email = franck.leroy.fr@live.fr
+	name = Franck Leroy
+[credential]
+	helper = store
