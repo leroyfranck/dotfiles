@@ -134,9 +134,9 @@ install() {
 
     chmod +x $executable
 
-    info "🚀 Installation complete."
+    info "🚀  Installation complete."
     posh_version=$(exec $executable --version)
-    info "   version : ${posh_version}"
+    info "    version : ${posh_version}"
 }
 
 detect_arch() {
