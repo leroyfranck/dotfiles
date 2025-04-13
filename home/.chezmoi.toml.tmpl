@@ -27,10 +27,10 @@
 
 {{- $hostname := .chezmoi.hostname -}}
 
-{{- if not $ephemeral -}}
+{{/* if not $ephemeral */}}
 {{-   if $interactive -}}
 {{/*     $headless = promptBoolOnce . "headless" "headless" */}}
-{{-     $ephemeral = promptBoolOnce . "ephemeral" "ephemeral" -}}
+{{/*     $ephemeral = promptBoolOnce . "ephemeral" "ephemeral" */}}
 {{-     if not $ephemeral -}}
 {{-       $docker = promptBoolOnce . "docker" "docker" -}}
 {{-     end -}}
@@ -38,7 +38,7 @@
 {{-     $ephemeral = true -}}
 {{-     $headless = true -}}
 {{-   end -}}
-{{- end -}}
+{{/* end */}}
 
 {{- $user  := env "GIT_USERNAME" -}}
 {{- $email := env "GIT_EMAIL" -}}
