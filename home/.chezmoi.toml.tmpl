@@ -27,18 +27,17 @@
 
 {{- $hostname := .chezmoi.hostname -}}
 
-{{/* if not $ephemeral */}}
-{{-   if $interactive -}}
-{{/*     $headless = promptBoolOnce . "headless" "headless" */}}
-{{/*     $ephemeral = promptBoolOnce . "ephemeral" "ephemeral" */}}
-{{-     if not $ephemeral -}}
-{{-       $docker = promptBoolOnce . "docker" "docker" -}}
-{{-     end -}}
-{{-   else -}}
-{{-     $ephemeral = true -}}
-{{-     $headless = true -}}
-{{-   end -}}
-{{/* end */}}
+
+{{- if $interactive -}}
+{{-   $docker = promptBoolOnce . "docker" "install docker" -}}
+{{- else -}}
+{{-   $ephemeral = true -}}
+{{-   $headless = true -}}
+{{- end -}}
+
+{{- if $interactive -}}
+{{-   writeToStdout "\n💡 Tip: you can always make chezmoi ask this again by running `chezmoi init` without `--force`.\n" -}}
+{{- end -}}
 
 {{- $user  := env "GIT_USERNAME" -}}
 {{- $email := env "GIT_EMAIL" -}}
