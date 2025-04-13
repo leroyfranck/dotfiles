@@ -13,3 +13,9 @@ Or, if chezmoi isn't install
 ```shell
 sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin init --apply leroyfranck
 ```
+
+To update chezmoi version :
+
+```shell
+chezmoi upgrade
+```
