@@ -42,10 +42,10 @@
 {{- $user  := env "GIT_USERNAME" -}}
 {{- $email := env "GIT_EMAIL" -}}
 {{- if and (not $user) $interactive -}}
-{{-   $user  = promptStringOnce . "user"  "Enter your git username: " -}}
+{{-   $user  = promptStringOnce . "git.user"  "Enter your git username: " -}}
 {{- end -}}
 {{- if and (not $email) $interactive -}}
-{{-   $email = promptStringOnce . "email" "Enter your git email: " -}}
+{{-   $email = promptStringOnce . "git.email" "Enter your git email: " -}}
 {{- end -}}
 
 

@@ -2,16 +2,16 @@
 
 Franck Leroy's dotfiles, managed with [`chezmoi`](https://github.com/twpayne/chezmoi).
 
-Install them with:
+Install chezmoi
 
 ```shell
-chezmoi init leroyfranck
+sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin
 ```
 
-Or, if chezmoi isn't install
+Install dotfiles
 
 ```shell
-sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin init --apply leroyfranck
+chezmoi init leroyfranck --apply
 ```
 
 To update chezmoi version :
