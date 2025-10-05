@@ -7,6 +7,27 @@
       "alignment": "left",
       "segments": [
         {
+          "type": "text",
+          "style": "diamond",
+          "foreground": "#82B1FF",
+          "template": "\u250f\u2500 "
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "{{.Icon}}",
+          "foreground": "#82B1FF",
+          "type": "os",
+          "style": "diamond"
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#82B1FF",
+          "template": " contexts "
+        },
+        {
           "properties": {
             "cache_duration": "none",
             "fetch_version": true
@@ -148,13 +169,10 @@
       "alignment": "left",
       "segments": [
         {
-          "properties": {
-            "cache_duration": "none"
-          },
-          "template": "{{.Icon}}",
+          "type": "text",
+          "style": "diamond",
           "foreground": "#82B1FF",
-          "type": "os",
-          "style": "powerline"
+          "template": "\u2523\u2500"
         },
         {
           "properties": {
@@ -260,7 +278,13 @@
       "segments": [
         {
           "type": "text",
-          "style": "powerline",
+          "style": "diamond",
+          "foreground": "#82B1FF",
+          "template": "\u2514\u2500"
+        },
+        {
+          "type": "text",
+          "style": "diamond",
           "foreground": "#82B1FF",
           "template": "{{ if .Env.DEVBOX_SHELL_ENABLED }}(devbox){{ end }}"
         },
@@ -279,7 +303,7 @@
           "template": "❯ ",
           "foreground": "#82B1FF",
           "type": "text",
-          "style": "plain"
+          "style": "diamond"
         }
       ],
       "newline": true
