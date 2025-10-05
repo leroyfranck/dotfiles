@@ -261,6 +261,12 @@
       "alignment": "left",
       "segments": [
         {
+          "type": "text",
+          "style": "powerline",
+          "foreground": "#82B1FF",
+          "template": "{{ if .Env.DEVBOX_SHELL_ENABLED }}(devbox){{ end }}"
+        },
+        {
           "properties": {
             "cache_duration": "none"
           },
