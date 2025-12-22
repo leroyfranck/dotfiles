@@ -11,7 +11,7 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin
 Install dotfiles
 
 ```shell
-chezmoi init leroyfranck --apply
+chezmoi init leroyfranck --branch fedora --apply
 ```
 
 To update chezmoi version :
