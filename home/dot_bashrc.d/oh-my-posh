@@ -1,3 +1,5 @@
 #!/usr/bin/bash
 
-eval "$(~/.local/bin/oh-my-posh init bash --config ~/.config/oh-my-posh/omp.json)"
+if [[ -z "$OMPOSH_DISABLED" || "$OMPOSH_DISABLED" != "1" ]]; then
+    eval "$(~/.local/bin/oh-my-posh init bash --config ~/.config/oh-my-posh/omp.json)"
+fi
