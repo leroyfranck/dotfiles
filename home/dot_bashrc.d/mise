@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+if [ -f ~/.local/bin/mise ]; then
+  eval "$(~/.local/bin/mise activate bash)"
+fi
+
+if [ -f /usr/bin/mise ]; then
+  eval "$(/usr/bin/mise activate bash)"
+fi
