@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+krew_bin="${KREW_ROOT:-$HOME/.krew}/bin"
+if [[ ":$PATH:" != *":$krew_bin:"* ]]; then
+    PATH="$krew_bin:$PATH"
+fi
+export PATH
